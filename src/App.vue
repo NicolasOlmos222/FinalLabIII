@@ -1,11 +1,31 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <VideoBackground v-if="mostrarL" @mostrar-m="mostrarComponenteM" />
+    <router-view v-if="mostrarM"/>
+  </div>
+  
 </template>
+<script>
+  import VideoBackground from '@/components/Login.vue';
 
+  export default {
+    data() {
+      return {
+        mostrarM: false,
+        mostrarL: true
+      };
+    },
+    methods: {
+      mostrarComponenteM() {
+        this.mostrarM = true;
+        this.mostrarL = false;
+      }
+    },
+    components: {
+      VideoBackground
+    }
+  };
+</script>¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿1
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
