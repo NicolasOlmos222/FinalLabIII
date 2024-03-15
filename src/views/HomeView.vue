@@ -9,8 +9,7 @@
       </div>
     </nav>
 
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld/>
   </div>
 </template>
 
@@ -29,7 +28,7 @@ export default {
 <style>
   .navbar {
     display: flex;
-    background-image: url('../assets/fondo.png');
+    background-color: bisque;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
@@ -44,8 +43,8 @@ export default {
 
   .decorateC {
     font-size: 80px;
-    color: rgb(255, 255, 255) !important;
-    background-image: url('../assets/fondo2.png');
+    color: rgb(0, 0, 0) !important;
+    background-image: url('../assets/fondo.png');
 
     border: 3px solid black !important;
     border-radius: 10px;

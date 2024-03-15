@@ -10,21 +10,24 @@
     </nav>
 
     <!-- VENTA -->
+    <venta/>
   </div>
 </template>
 
 <script>
-
+import venta from '@/components/venta.vue'
 export default {
   name: 'HomeView',
-
+  components: {
+    venta,
+  },
 }
 </script>
 
 <style>
   .navbar {
     display: flex;
-    background-image: url('../assets/fondo.png');
+    background-color: bisque;
     justify-content: space-between;
     align-items: center;
     height: 50px; /* Ajusta la altura según sea necesario */
