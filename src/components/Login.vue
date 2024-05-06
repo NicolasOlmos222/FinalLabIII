@@ -3,12 +3,11 @@
     <video autoplay muted loop :src="videoSrc" class="fill-width">
       Your browser does not support HTML5 video.
     </video>
-    <!-- Aquí puedes colocar el contenido que se superpondrá sobre el video -->
+    
     <div class="formularioDeInicio">
       <div class="formularioContenedor">
         <form @submit.prevent="submitForm" class="loginForm">
           <input type="text" placeholder="Usuario ID" v-model="username" class="inputForm" required/>
-          <input type="password" placeholder="Contraseña" v-model="password" class="inputForm"/>
           <button type="submit" class="botonForm">Iniciar sesión</button>
         </form>
       </div>

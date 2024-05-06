@@ -9,51 +9,37 @@
       </div>
     </nav>
 
-    <!-- VENTA -->
-    <venta/>
+    <div class="contenedor">
+      <useApiCripto/>
+      <UseOperacion :valor="false"/>
+    </div>
   </div>
 </template>
 
-<script>
-import venta from '@/components/venta.vue'
-export default {
-  name: 'HomeView',
-  components: {
-    venta,
-  },
-}
+<script setup>
+  import useApiCripto from '@/components/apiCripto.vue'
 </script>
 
+<script>
+  import UseOperacion from '@/components/MiOperacion.vue'
+
+  export default {
+  components: {
+    UseOperacion // Registrar el componente 'MiComponente' para poder utilizarlo
+  }
+  };
+</script>
 <style>
-  .navbar {
+  .contenedor{
+      display: flex;
+      margin-left: 10%;
+    }
+  .navbar{
     display: flex;
-    background-color: bisque;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px; /* Ajusta la altura según sea necesario */
+    background-color: rgb(68, 68, 68, 0.2);
+  }
+  .nav-left, .nav-right{
+    margin-right: 15px;
   }
 
-  .nav-left,
-  .nav-right {
-    width: 50%; /* Divide el nav en dos partes */
-    text-align: center;
-    font-size: 50px;
-  }
-  .decorateV {
-    font-size: 80px;
-    color: rgb(255, 255, 255) !important;
-    background-image: url('../assets/fondo2.png');
-    border: 3px solid black !important;
-    border-radius: 10px;
-    padding-left: 30%;
-    padding-right: 30%;
-    font-family: monospace;
-    text-decoration: none;
-  }
-  .decorate {
-    font-size: 40px;
-    color: rgb(0, 0, 0) !important;
-    font-family: monospace;
-    text-decoration: none;
-  }
 </style>

@@ -25,7 +25,7 @@
       VideoBackground
     }
   };
-</script>¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿1
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

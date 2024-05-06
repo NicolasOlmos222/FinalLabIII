@@ -8,55 +8,37 @@
         <router-link to="/about" class="decorate">VENTA</router-link>
       </div>
     </nav>
-
-    <HelloWorld/>
   </div>
-</template>
+  <div class="contenedor">
+    <useApiCripto/>
+    <UseOperacion :valor="true"/>
+  </div>
+  </template>
+
+<script setup>
+  import useApiCripto from '@/components/apiCripto.vue'
+</script>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import UseOperacion from '@/components/MiOperacion.vue'
 
-export default {
-  name: 'HomeView',
+  export default {
   components: {
-    HelloWorld,
-  },
-}
+    UseOperacion // Registrar el componente 'MiComponente' para poder utilizarlo
+  }
+  };
 </script>
 
 <style>
-  .navbar {
+  .contenedor{
     display: flex;
-    background-color: bisque;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    height: 50px; /* Ajusta la altura según sea necesario */
+    margin-left: 10%;
   }
-
-  .nav-left,
-  .nav-right {
-    width: 50%; /* Divide el nav en dos partes */
-    text-align: center;
+  .navbar{
+    display: flex;
+    background-color: rgb(68, 68, 68, 0.2);
   }
-
-  .decorateC {
-    font-size: 80px;
-    color: rgb(0, 0, 0) !important;
-    background-image: url('../assets/fondo.png');
-
-    border: 3px solid black !important;
-    border-radius: 10px;
-    padding-left: 30%;
-    padding-right: 30%;
-    font-family: monospace;
-    text-decoration: none;
-  }
-  .decorate {
-    font-size: 40px;
-    color: rgb(0, 0, 0) !important;
-    font-family: monospace;
-    text-decoration: none;
+  .nav-left, .nav-right{
+    margin-right: 15px;
   }
 </style>
